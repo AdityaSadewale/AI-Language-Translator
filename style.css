@@ -1,0 +1,406 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #6C63FF;
+    --secondary: #00C9A7;
+    --bg: linear-gradient(135deg, #667eea, #764ba2);
+    --glass: rgba(255, 255, 255, 0.15);
+    --text: #ffffff;
+}
+
+body.dark {
+    --bg: linear-gradient(135deg, #141E30, #243B55);
+    --glass: rgba(0, 0, 0, 0.4);
+    --text: #ffffff49;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s ease;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: var(--glass);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    color: var(--text);
+    animation: fadeUp 0.8s ease;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+#themeToggle {
+    background: none;
+    font-size: 20px;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+select, textarea {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    color: rgb(17, 3, 3);
+    font-size: 14px;
+    outline: none;
+    backdrop-filter: blur(10px);
+}
+
+select option {
+    color: black;
+}
+
+.text-area {
+    display: flex;
+    gap: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 160px;
+    resize: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s ease;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: rgb(27, 18, 18);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.loading {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+    display: none;
+}
+
+h3 {
+    margin-top: 25px;
+}
+
+#historyList {
+    list-style: none;
+    margin-top: 10px;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+#historyList li {
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+/* Scrollbar */
+#historyList::-webkit-scrollbar {
+    width: 6px;
+}
+#historyList::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .text-area {
+        flex-direction: column;
+    }
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Highlight translator card */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: var(--glass);
+    box-shadow: 0 0 25px rgba(108, 99, 255, 0.5), 0 15px 40px rgba(0,0,0,0.3); /* Glow added */
+    color: var(--text);
+    animation: fadeUp 0.8s ease;
+    transition: 0.3s ease;
+}
+
+/* Glow on hover */
+.container:hover {
+    box-shadow: 0 0 35px rgba(108, 99, 255, 0.7), 0 20px 50px rgba(0,0,0,0.35);
+}
+
+/* Highlight input/output textareas */
+textarea {
+    width: 100%;
+    height: 160px;
+    resize: none;
+    background: rgba(255,255,255,0.25);
+    border-radius: 12px;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+    outline: none;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.5); /* subtle glow */
+    transition: 0.3s ease;
+}
+
+/* Glow when focused */
+textarea:focus {
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.8);
+    background: rgba(255,255,255,0.35);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    /* Background image */
+    background: url('https://images.unsplash.com/photo-1612831455540-0d92b6e3f4c0?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+    background-size: cover;
+
+    /* Overlay gradient for better readability */
+    position: relative;
+    color: var(--text);
+}
+
+/* Optional overlay layer for glass readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.35); /* dark overlay for light images */
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* ensures card is above overlay */
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: var(--glass);
+    box-shadow: 0 0 25px rgba(108, 99, 255, 0.5), 0 15px 40px rgba(0,0,0,0.2);
+    color: var(--text);
+    animation: fadeUp 0.8s ease;
+    transition: 0.5s ease;
+}
+
+
+/* Animated gradient */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Light Mode Variables */
+:root {
+    --primary: #6C63FF;
+    --secondary: #00C9A7;
+    --bgGradient: linear-gradient(270deg, #FFDEE9, #B5FFFC, #C1FFD7, #FFEFBA);
+    --glass: rgba(255, 255, 255, 0.35);
+    --text: #222222;
+}
+
+/* Dark Mode Variables */
+body.dark {
+    --bgGradient: linear-gradient(270deg, #667eea, #764ba2, #00c9a7, #ff7eb9);
+    --glass: rgba(0, 0, 0, 0.4);
+    --text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: var(--bgGradient);
+    background-size: 800% 800%;
+    animation: gradientBG 15s ease infinite;
+    color: var(--text);
+    transition: 0.5s ease;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Glass card */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: var(--glass);
+    box-shadow: 0 0 25px rgba(108, 99, 255, 0.5), 0 15px 40px rgba(0,0,0,0.2);
+    color: var(--text);
+    animation: fadeUp 0.8s ease;
+    transition: 0.5s ease;
+}
+
+.container:hover {
+    box-shadow: 0 0 35px rgba(108, 99, 255, 0.7), 0 20px 50px rgba(0,0,0,0.3);
+}
+
+/* Textareas */
+textarea {
+    width: 100%;
+    height: 160px;
+    resize: none;
+    background: rgba(255,255,255,0.35); /* light glass for both modes */
+    border-radius: 12px;
+    color: var(--text); /* solid text color from root */
+    padding: 12px;
+    font-size: 14px;
+    outline: none;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+/* Dark mode overrides for textarea */
+body.dark textarea {
+    background: rgba(0,0,0,0.4); /* darker glass */
+}
+
+/* Placeholder text color */
+textarea::placeholder {
+    color: rgba(34,34,34,0.7); /* Light mode placeholder */
+}
+
+body.dark textarea::placeholder {
+    color: rgba(255,255,255,0.7); /* Dark mode placeholder */
+}
+
+/* Card text */
+.container, select, h1, h3, li, button {
+    color: var(--text); /* Ensures all text is visible in both modes */
+}
+
+
+textarea:focus {
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.8);
+    background: rgba(255,255,255,0.35);
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s ease;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Responsive & Animations */
+.text-area {
+    display: flex;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .text-area {
+        flex-direction: column;
+    }
+}
+
+@keyframes fadeUp {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}

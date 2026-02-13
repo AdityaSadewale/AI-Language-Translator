@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Language Translator Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🌍 AI Language Translator Pro</h1>
+        <button id="themeToggle">🌙</button>
+    </header>
+
+    <div class="controls">
+        <select id="fromLang"></select>
+        <button id="swapBtn">⇄</button>
+        <select id="toLang"></select>
+    </div>
+
+    <div class="text-area">
+        <textarea id="inputText" placeholder="Enter text..."></textarea>
+        <textarea id="outputText" placeholder="Translated text..." readonly></textarea>
+    </div>
+
+    <div class="buttons">
+        <button id="translateBtn">Translate</button>
+        <button id="voiceBtn">🎤 Voice</button>
+        <button id="speakBtn">🔊 Speak</button>
+        <button id="copyBtn">Copy</button>
+    </div>
+
+    <div id="loading" class="loading">Translating...</div>
+
+    <h3>📜 Translation History</h3>
+    <ul id="historyList"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
