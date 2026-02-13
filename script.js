@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyAFoZ75LMhDDOnNWXgV-hfM2sTkZDmpfLM";
+const API_KEY = "";
 
 
 const fromLang = document.getElementById("fromLang");
